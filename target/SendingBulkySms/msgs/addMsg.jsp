@@ -40,8 +40,16 @@
                                 <label for="to">To:</label><br>
                                 <input type="text" name="to" id="to" class="form-control">
 
-
                             </div>
+                            <div class="form-group">
+                                <select required name="option" id="" class="btn">
+                                    <option>SEND BY</option>
+                                    <option>AT</option>
+                                    <option>NEXMO</option>
+                                    <option>INFOBIT</option>
+                                </select>
+                            </div>
+                            
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Send">
                             </div>
