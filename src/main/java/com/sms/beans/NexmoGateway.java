@@ -13,6 +13,7 @@ public class NexmoGateway extends Bean<Sms> implements SmsI {
     public boolean sendMessage(Sms sms) {
         //implementation of sending msg..
         sms.setMessageStatus(MessageStatus.RECIEVED);
+        System.out.println("Send by nexmo"+ " "+ sms);
         return true;
     }
 }

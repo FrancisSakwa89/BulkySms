@@ -72,4 +72,14 @@ public class Sms {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Sms{" +
+                "message='" + message + '\'' +
+                ", recepient='" + recepient + '\'' +
+                ", messageStatus=" + messageStatus +
+                ", date=" + date +
+                '}';
+    }
 }
