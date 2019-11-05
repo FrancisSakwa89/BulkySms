@@ -2,9 +2,11 @@ package com.sms.jms;
 
 import com.sms.beans.SmsI;
 import com.sms.cdi.ApiProvider;
+import com.sms.models.MessageStatus;
 import com.sms.models.Sms;
 
 import javax.ejb.Local;
+import javax.ejb.Schedule;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -21,7 +23,7 @@ public class CheckMsg {
 //    @Schedule(minute = "*", hour = "*", second = "*/30")
     public void resend() {
         Sms sms = new Sms();
-        if (sms.getMessageStatus().equals(false)) {
+        if (sms.getMessageStatus().equals(MessageStatus.PENDING)) {
 
 
         }

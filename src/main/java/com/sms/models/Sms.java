@@ -1,5 +1,6 @@
 package com.sms.models;
 
+import javax.json.bind.annotation.JsonbDateFormat;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,16 +19,20 @@ public class Sms {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
     private String message;
+    private String sender;
     private String recepient;
     private MessageStatus messageStatus;
+    @Temporal(TemporalType.DATE)
+    @JsonbDateFormat
     private Date date;
 
 
     public Sms() {
     }
 
-    public Sms(String message, String recepient, MessageStatus messageStatus, Date date) {
+    public Sms(String message, String sender, String recepient, MessageStatus messageStatus, Date date) {
         this.message = message;
+        this.sender = sender;
         this.recepient = recepient;
         this.messageStatus = messageStatus;
         this.date = date;
@@ -47,6 +52,14 @@ public class Sms {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 
     public String getRecepient() {
@@ -76,7 +89,9 @@ public class Sms {
     @Override
     public String toString() {
         return "Sms{" +
-                "message='" + message + '\'' +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", sender='" + sender + '\'' +
                 ", recepient='" + recepient + '\'' +
                 ", messageStatus=" + messageStatus +
                 ", date=" + date +

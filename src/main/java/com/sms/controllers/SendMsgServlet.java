@@ -5,7 +5,6 @@ import com.sms.jms.FilterMessages;
 import com.sms.models.Sms;
 
 import javax.ejb.EJB;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,13 +22,17 @@ public class SendMsgServlet extends HttpServlet {
     @EJB
     TextMessageQI textMessageQI;
 
+
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String sender = req.getParameter("sender");
         String msg = req.getParameter("msg");
         String recipient = req.getParameter("to");
         Sms sms = new Sms();
         sms.setMessage(msg);
         sms.setRecepient(recipient);
+        sms.setSender(sender);
         Date date = new Date();
         sms.setDate(date);
 

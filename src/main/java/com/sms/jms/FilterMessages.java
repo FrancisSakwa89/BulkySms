@@ -32,19 +32,25 @@ public class FilterMessages {
 
 
     public void checkMessage(String option, Sms sms) {
-        textMessageQI.addMessage(sms);
+        try{
+            textMessageQI.addMessage(sms);
 //        Sms sms = new Sms();
-        textMessageQI.checkValidity(sms);
-        sms.setMessageStatus(MessageStatus.PENDING);
+            textMessageQI.checkValidity(sms);
+            sms.setMessageStatus(MessageStatus.PENDING);
+            if (option.equalsIgnoreCase("AT")) {
+                smsI.sendMessage(sms);
+            } else if (option.equalsIgnoreCase("NEXMO")){
+                sms2.sendMessage(sms);
+            }
+            else {
+                sms3.sendMessage(sms);
+            }
+        }catch (Exception e){
+            System.out.println("Error occurred..");
+            e.printStackTrace();
+        }
 
-        if (option.equalsIgnoreCase("AT")) {
-            smsI.sendMessage(sms);
-        } else if (option.equalsIgnoreCase("NEXMO")){
-            sms2.sendMessage(sms);
-        }
-        else {
-            sms3.sendMessage(sms);
-        }
+
 //
     }
 }

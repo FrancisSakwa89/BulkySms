@@ -33,6 +33,10 @@
                             <h3 class="text-center">Send Msg Form
                             </h3>
                             <div class="form-group">
+                                <label for="sender">From</label><br>
+                                <input type="text" required name="sender" id="sender" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="msg">Message</label><br>
                                 <input type="text" required name="msg" id="msg" class="form-control">
                             </div>
@@ -52,6 +56,7 @@
 
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Send">
+                                <input type="reset" name="reset" class="btn btn-danger btn-md" value="Cancel">
                             </div>
 
 
@@ -68,9 +73,7 @@
 
     <style>
         body {
-            /*margin: 0;*/
-            /*padding: 0;*/
-            /*height: 70vh;*/
+
         }
 
         #login .container #login-row #login-column #login-box {

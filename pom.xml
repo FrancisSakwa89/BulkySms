@@ -52,7 +52,31 @@
       <version>1.4.1.Final</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.nexmo/client -->
+    <dependency>
+      <groupId>com.nexmo</groupId>
+      <artifactId>client</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.infobip/infobip-api-java-client -->
+    <dependency>
+      <groupId>com.infobip</groupId>
+      <artifactId>infobip-api-java-client</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jboss.logging/jboss-logging -->
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging</artifactId>
+      <version>3.4.0.Final</version>
+    </dependency>
 
+    <dependency>
+      <groupId>com.africastalking</groupId>
+      <artifactId>sms</artifactId>
+      <version>3.4.0</version>
+      <type>pom</type>
+    </dependency>
 
 
     <dependency>
@@ -172,6 +196,21 @@
       <groupId>javax.json</groupId>
       <artifactId>javax.json-api</artifactId>
       <version>1.1.4</version>
+    </dependency>
+      <dependency>
+          <groupId>com.africastalking</groupId>
+          <artifactId>SMS</artifactId>
+          <version>3.4.2</version>
+      </dependency>
+      <dependency>
+          <groupId>com.africastalking</groupId>
+          <artifactId>client</artifactId>
+          <version>3.0.0</version>
+      </dependency>
+    <dependency>
+      <groupId>com.africastalking</groupId>
+      <artifactId>core</artifactId>
+      <version>3.4.0</version>
     </dependency>
 
   </dependencies>

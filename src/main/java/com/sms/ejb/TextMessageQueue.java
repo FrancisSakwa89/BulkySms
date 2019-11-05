@@ -37,6 +37,7 @@ TextMessageQI textMessageQI;
         }
         else {
             textMessageQI.addMessage(sms);
+            smsLinkedList.poll();
 
         }
     }
